@@ -89,6 +89,7 @@ MultiChannelMemorySystem::MultiChannelMemorySystem(const string& deviceIniFilena
     configuration = new Configuration(*addrMapping);
     numFence = new unsigned[configuration->NUM_CHANS]();
 
+    printf("Creat a MultiChannelMemorySystem\n");
     for (size_t i = 0; i < configuration->NUM_CHANS; i++)
     {
         MemorySystem* channel = new MemorySystem(i, megsOfMemory / configuration->NUM_CHANS,
